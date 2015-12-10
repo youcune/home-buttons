@@ -4,6 +4,7 @@ gem 'activesupport'
 
 # Sinatra
 gem 'sinatra'
+gem 'sinatra-contrib'
 gem 'rerun'
 
 # API
