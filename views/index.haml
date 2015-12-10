@@ -1,0 +1,44 @@
+.row
+  .col.col-xs-6.col-sm-3
+    %a.btn.btn-primary.btn-block{href: '/ohayo'}
+      .btn-icon
+        %i.fa.fa-sun-o.fa-3x
+      .btn-label
+        おはよう
+  .col.col-xs-6.col-sm-3
+    %a.btn.btn-primary.btn-block{href: '/oyasumi'}
+      .btn-icon
+        %i.fa.fa-moon-o.fa-3x
+      .btn-label
+        おやすみ
+  .col.col-xs-6.col-sm-3
+    %a.btn.btn-primary.btn-block{href: '/ittekimasu'}
+      .btn-icon
+        %i.fa.fa-car.fa-3x
+      .btn-label
+        いってきます
+  .col.col-xs-6.col-sm-3
+    %a.btn.btn-primary.btn-block{href: '/tadaima'}
+      .btn-icon
+        %i.fa.fa-home.fa-3x
+      .btn-label
+        ただいま
+#alert
+:sass
+  .col
+    margin-bottom: 10px
+:coffee
+  $('a.btn').click (e) ->
+    e.preventDefault()
+
+    endpoint = $(this).attr('href')
+    $.ajax
+      url: endpoint
+      method: 'POST'
+    .done (data) ->
+      if data.status == 'OK'
+        $('#alert').html('<div class="alert alert-success">' + data.message + '</div>')
+      else
+        alert('エラーのようです')
+    .fail ->
+      alert('エラーのようです')

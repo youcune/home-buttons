@@ -9,8 +9,16 @@ class HueService
     living_group.off!
   end
 
+  def self.off!
+    client.lights.map(&:off!)
+  end
+
   private
   def self.living_group
-    Hue::Client.new.group(1)
+    client.group(1)
+  end
+
+  def self.client
+    Hue::Client.new
   end
 end
