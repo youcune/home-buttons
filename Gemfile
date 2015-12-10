@@ -16,6 +16,7 @@ gem 'httparty'
 gem 'hamlit'
 gem 'coffee-script'
 gem 'sass'
+gem 'therubyracer'
 
 # Debugging
 gem 'pry'
