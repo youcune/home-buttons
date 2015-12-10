@@ -15,6 +15,7 @@ gem 'httparty'
 # Views
 gem 'hamlit'
 gem 'coffee-script'
+gem 'sass'
 
 # Debugging
 gem 'pry'
