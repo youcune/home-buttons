@@ -1,5 +1,3 @@
-require 'hue'
-
 class HueService
   def self.living_on!
     living_group.on!

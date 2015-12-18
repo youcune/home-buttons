@@ -1,8 +1,3 @@
-require 'active_support'
-require 'active_support/core_ext'
-
-require 'pry'
-
 class WeatherService
   # 下記から天気予報を取得したいIDを見つける
   # http://weather.livedoor.com/forecast/rss/primary_area.xml
