@@ -10,6 +10,6 @@ class RoombaLog < ActiveRecord::Base
   end
 
   def self.cleaned_recently?
-    last_cleaned_time.present? && last_cleaned_time <= CLEAN_INTERVAL.ago
+    last_cleaned_time.try { |_| _ > CLEAN_INTERVAL.ago }
   end
 end
