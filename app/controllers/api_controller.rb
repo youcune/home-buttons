@@ -10,7 +10,7 @@ class ApiController < ApplicationController
 
     # TODO 起きる時刻をカレンダーから予定を読み取って判断するようにしたい
     if WeatherService.cold_tomorrow?
-      AirConService.heat_zzzzzzafter_5_hours!
+      AirConService.heat_after_5_hours!
     elsif WeatherService.hot_tomorrow?
       AirConService.cold_after_5_hours!
     else
