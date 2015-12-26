@@ -38,4 +38,12 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # AlarmService
+  config.alarm_mp3_file = '/Applications/iMovie.app/Contents/Resources/iMovie Sound Effects/Alarm.mp3'
+
+  # GoogleCalendarService
+  config.google_calendar_id = 'you@youcube.jp'
+  config.google_calendar_iam_email = 'home-buttons-gcal@home-buttons-gcal.iam.gserviceaccount.com'
+  config.google_calendar_pkcs12_key_file = '/Users/youcune/Downloads/home-buttons-gcal-3061e082dc38.p12'
 end
