@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'carnelian', github: 'youcune/carnelian'
 
+# ActiveJob
+gem 'sidekiq'
+
 # Assets
 gem 'coffee-rails'
 gem 'therubyracer'
@@ -19,6 +22,7 @@ gem 'hamlit'
 # API
 gem 'hue'
 gem 'irkit'
+gem 'google-api-client', require: 'google/api_client'
 gem 'httparty'
 
 # Database

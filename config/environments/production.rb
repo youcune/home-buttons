@@ -76,4 +76,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # AlarmService
+  config.alarm_mp3_file = '/home/pi/Music/alarm.mp3'
+
+  # GoogleCalendarService
+  config.google_calendar_id = 'you@youcube.jp'
+  config.google_calendar_iam_email = 'home-buttons-gcal@home-buttons-gcal.iam.gserviceaccount.com'
+  config.google_calendar_pkcs12_key_file = '/home/pi/apps/home-buttons/home-buttons-gcal-3061e082dc38.p12'
 end
