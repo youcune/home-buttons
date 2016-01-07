@@ -7,6 +7,6 @@ class RoombaService
   end
 
   def self.clean_if_interval!
-    clean! unless TimeService.can_make_noise? && RoombaLog.cleaned_recently?
+    clean! if TimeService.can_make_noise? && !RoombaLog.cleaned_recently?
   end
 end
