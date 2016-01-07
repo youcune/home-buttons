@@ -4,6 +4,6 @@ class AlarmService
 
   def self.set(prior_time = PRIOR_TIME)
     alarm_time = GoogleCalendarService.today_first_event_start_time - prior_time
-    Mp3PlayerJob.set(wait_until: alarm_time).perform_later(HomeButtonsRails::Application.config.alarm_mp3_file)
+    AlarmJob.set(wait_until: alarm_time).perform_later
   end
 end
