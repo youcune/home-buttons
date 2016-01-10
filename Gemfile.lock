@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/youcune/carnelian.git
-  revision: a2bde26cf0a59ec4f41103e6e95ec486f93f1915
+  revision: 8c269b23cdfff88d0229bf99eb46f74051f21650
   specs:
-    carnelian (1.3.0)
+    carnelian (1.4.0)
       activesupport
 
 GEM
