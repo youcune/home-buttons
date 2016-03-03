@@ -5,10 +5,12 @@ class GoogleCalendarService
     today_first_event.start.date_time.in_time_zone
   end
 
-  # 今日の最初のイベントを返す
+  # 終日イベントを除いた今日の最初のイベントを返す
   # @return [Google::APIClient::Schema::Calendar::V3::Event]
   def self.today_first_event
-    today_events.first
+    today_events
+      .select{ |_| _.start.date_time.present? }
+      .min{ |_| _.start.date_time.in_time_zone.to_i }
   end
 
   # 今日のイベントをすべて返す

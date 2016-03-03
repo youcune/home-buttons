@@ -45,5 +45,5 @@ Rails.application.configure do
   # GoogleCalendarService
   config.google_calendar_id = 'you@youcube.jp'
   config.google_calendar_iam_email = 'home-buttons-gcal@home-buttons-gcal.iam.gserviceaccount.com'
-  config.google_calendar_pkcs12_key_file = '/Users/youcune/Downloads/home-buttons-gcal-3061e082dc38.p12'
+  config.google_calendar_pkcs12_key_file = '/Users/youcune/develop/home-buttons/home-buttons-gcal-3061e082dc38.p12'
 end

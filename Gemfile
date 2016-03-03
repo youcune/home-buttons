@@ -22,7 +22,7 @@ gem 'hamlit'
 # API
 gem 'hue'
 gem 'irkit'
-gem 'google-api-client', require: 'google/api_client'
+gem 'google-api-client', '~> 0.8.6', require: 'google/api_client'
 gem 'httparty'
 
 # Database
