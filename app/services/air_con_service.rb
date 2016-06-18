@@ -10,6 +10,10 @@ class AirConService
   end
 
   def self.method_missing(method)
-    IRKitService.post_data(SIGNALS[method.to_s.delete('!').to_sym])
+    if respond_to? method
+      IRKitService.post_data(SIGNALS[method.to_s.delete('!').to_sym])
+    else
+      raise ArgumentError, "Invalid method #{method.to_s} triggered!"
+    end
   end
 end
