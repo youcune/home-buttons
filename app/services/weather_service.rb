@@ -16,7 +16,7 @@ class WeatherService
   end
 
   def self.hot_tomorrow?
-    tomorrow_max_temperature >= HOT_TEMP
+    tomorrow_min_temperature >= HOT_TEMP
   end
 
   def self.cold_tomorrow?
