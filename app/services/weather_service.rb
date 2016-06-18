@@ -4,7 +4,7 @@ class WeatherService
   CITY = 280010
 
   # 暑い・寒い閾値
-  HOT_TEMP = 25
+  HOT_TEMP = 27
   COLD_TEMP = 10
 
   def self.hot_now?
