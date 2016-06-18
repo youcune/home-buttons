@@ -9,7 +9,7 @@ class GoogleCalendarService
   # @return [Google::APIClient::Schema::Calendar::V3::Event]
   def self.today_first_event
     today_events
-      .select{ |_| _.start.date_time.present? }
+      .select{ |_| _.start.date_time.present? && _.start.date_time > Time.current }
       .min{ |_| _.start.date_time.in_time_zone.to_i }
   end
 
