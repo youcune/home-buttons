@@ -12,7 +12,7 @@ class ApiController < ApplicationController
     if WeatherService.cold_tomorrow?
       AirConService.heat_after_5_hours!
     elsif WeatherService.hot_tomorrow?
-      AirConService.cold_after_5_hours!
+      AirConService.cool_after_5_hours!
     else
       AirConService.off!
     end
