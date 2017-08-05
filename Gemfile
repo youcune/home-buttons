@@ -17,12 +17,11 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 
 # Views
-gem 'hamlit'
+gem 'hamlit-rails'
 
 # API
 gem 'hue'
 gem 'irkit'
-gem 'google-api-client', '~> 0.8.6', require: 'google/api_client'
 gem 'httparty'
 
 # Database
@@ -37,5 +36,4 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'quiet_assets'
 end

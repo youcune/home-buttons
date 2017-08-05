@@ -8,11 +8,11 @@ class WeatherService
   COLD_TEMP = 10
 
   def self.hot_now?
-    today_max_temperature >= HOT_TEMP
+    today_max_temperature != 0 && today_max_temperature >= HOT_TEMP
   end
 
   def self.cold_now?
-    today_min_temperature <= COLD_TEMP
+    today_min_temperature != 0 && today_min_temperature <= COLD_TEMP
   end
 
   def self.hot_tomorrow?
@@ -53,7 +53,7 @@ class WeatherService
     date = time.strftime('%Y-%m-%d')
     p "looking up tempeature for #{date} ..."
     temp = weather_forecast[:forecasts].select{ |_| _[:date] == date }.first[:temperature]
-    [temp[:max][:celsius].to_i, temp[:min][:celsius].to_i]
+    [temp[:max].try(:[], :celsius).to_i, temp[:min].try(:[], :celsius).to_i]
   end
 
   private
